@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POT - Barrios</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+            <a class="navbar-brand" href="#">
+                <img src="logo-alcaldia-piedecuesta.png" alt="Logo Alcaldia Piedecuesta">
+                <img src="logo_itim.jpg" alt="Logo Itim">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul id="navBarMenu" class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">Cartografía temática</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a class="test dropdown-item" tabindex="-1" href="#">Plan Ordenamiento Territorial<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=72c0410e434444d48a6e0ac3be7f72f6','POT - Barrios')">Barrios</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=d62b050b6d704187b517f5367a7e5548','POT - Equipamentos')">Equipamentos</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=c63abfe7aab149f19a78817d2c492575','POT - Amenazas')">Amenazas</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=d7950d328b98499eb0c07ccc98db9f33','POT - Sectorización Urbana')">Sectorización Urbana</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=18dd8ce5a9ca41b3ae170ee109127eb1','POT - Ejes Estructurantes')">Ejes Estructurantes</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=cf47961102e7451fafc60dde0508eb7d','POT - Uso de suelo urbano')">Uso de suelo urbano</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=8f65139282cb4f478fb91295b46e2574','POT - Tratamiento del suelo urbano')">Tratamiento del suelo urbano</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=e9e8df20ea5f4dd5a48f4b75743cdaa2','POT - Proyectos urbanos')">Proyectos urbanos</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=ed5776072e814fe19a2ac34f8f8a4060','POT - Espacio Púbico')">Espacio Púbico</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=f1b4f570f75b4f0898db7d96d5538ec7','POT - Proyectos viales')">Proyectos viales</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=2d4a8fcb4b7d45cd8898ddce4be751ef','POT - Expansión Norte')">Expansión Norte</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=26f7f79b0fc24a9e8d6c32ed8e7bd5db','POT - Expansión Sur')">Expansión Sur</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=2c83abb06d25407193b9033031d2daba','POT - Uso potencial del suelo')">Uso potencial del suelo</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=468f0b27062f4e8cacba5e6f9d78ca33','POT - Conflictos de Uso')">Conflictos de Uso</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=421c1fea483c4c0584e5adc34b74c05b','POT - Clasificacion del Suelo Rural')">Clasificacion del Suelo Rural</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=30413dbfcc614ce9b67074cf22f66aec','POT - Zonificacion Ambiental')">Zonificacion Ambiental</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=af40373d68a44a1da67d293c3414f2d6','POT - Suburbano')">Suburbano</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">Cartografía normativa</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a class="test dropdown-item" tabindex="-1" href="#">Plan Zonal Hipinto <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=0bfa3d59ad7b44aba29cb68c4e55c4a5','Diagnóstico - Imagen de Satélite')"">Diagnóstico - Imagen de Satélite</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=d6386827ea46490cac98d4a348f09e9d','Diagnóstico - Localización general')"">Diagnóstico - Localización general</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=2dc299f1831a428db339f5b8aa415d71','Diagnóstico - Mapa base')">Diagnóstico - Mapa base</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=2340cdd72a2d476394316cdd11736aac','Diagnóstico - Vegetación Natural')">Diagnóstico - Vegetación Natural</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=ef82700d0c3b4e70aff8de8c90291706','Diagnóstico - Clasificación Agrícola')">Diagnóstico - Clasificación Agrícola</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=92aff8d2e3944d96820c40fefd95b7ac','Diagnóstico - Geología Local')">Diagnóstico - Geología Local</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=0e1a1c0c98ce45599a5b30bf7fb0e391','Diagnóstico - Amenazas Naturales')">Diagnóstico - Amenazas Naturales</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=1ff48ed9bdc544358bcab2316d88e2e4','Diagnóstico - Uso de la tierra')">Diagnóstico - Uso de la tierra</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=4dfaa0a456c14e02a3d252571fce8940','Diagnóstico - Microzonificación Geotécnica')">Diagnóstico - Microzonificación Geotécnica</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=d804c319dd0b4cda9844c4ae4044fc98','Diagnóstico - Geomorfológico')">Diagnóstico - Geomorfológico</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=5ea8e2f101bf4060a8348abc8aee1293','Diagnóstico - Caracterización hidrológica')">Diagnóstico - Caracterización hidrológica</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=a545895ac18347f2a9dffaa167ce6d71','Diagnóstico - Área inundable')">Diagnóstico - Área inundable</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=6da6065418dc42b0a6aac406ed32d45e','Diagnóstico - Modelo de pendientes')">Diagnóstico - Modelo de pendientes</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=19bfc95cefe6466cba692a91ba1f9746','Diagnóstico - Modelo digital de elevación')">Diagnóstico - Modelo digital de elevación</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=ca4b3312039b492d8c0015839ea439ea','Diagnóstico - Contaminación')">Diagnóstico - Contaminación</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=d81a23b543af47debe110d7cf3eff818','Diagnóstico - Sintesís de evaluación')">Diagnóstico - Sintesís de evaluación</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=c95ebd773ca64c9e944d0498ced82414','Diagnóstico - Sintesís de evaluación después del ejercicio de ocupación')">Diagnóstico - Sintesís de evaluación después del ejercicio de ocupación</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=a815f9b2fc8c42baa64648761cef86b3','Diagnóstico - Clasificación del suelo')">Diagnóstico - Clasificación del suelo</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=8a9dfe6754f749a08094b118d07eb37b','Diagnóstico - zonificación ambiental')">Diagnóstico - zonificación ambiental</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=055c724a36ff413c84897552d8b525ec','Formulación - Ejercicio de ocupación')">Formulación - Ejercicio de ocupación</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=33640d09ba8940bc987a2cf5390dc7ae','Formulación - Sistema vial')">Formulación - Sistema vial</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=5f51d3fffe9d49a883c0397c1112e6aa','Formulación - Perfiles viales')">Formulación - Perfiles viales</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=d1ceb89efdd3497da83fc5d552fe7ba2','Formulación - Espacios Públicos')">Formulación - Espacios Públicos</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=b96eedf8524148158dcaf4463ad52b7c','Formulación - Redes de servicios públicos')">Formulación - Redes de servicios públicos</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=859a0fe0ee3e4aa6a6d14a3bcbe9166e','Formulación - Usos')">Formulación - usos</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=8a8df8864ab04fe9a60dfac764af12a9','Formulación - Unidades de gestión')">Formulación - Unidades de gestión</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=96a7d5f26f7b4d51accf45b1a042ba74','Formulación - Etapas de Desarrollo')">Formulación - Etapas de Desarrollo</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=be84e199585f4942b8857a40dce743ca','F26 zonas beneficiadas acciones urbanisticas')">F26 zonas beneficiadas acciones urbanisticas</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=63f48151a5734a5087536416a34de2f9','Mapa Base urbanismo')">Mapa Base urbanismo</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=23ec1f6fc4c74a8ab805b2e5c8387bbc','Unidades de Gestión')">Unidades de Gestión</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=f844cd5e064f4a8a9037b387e1d49db3','MD15b Sintesís de evaluación')">MD15b Sintesís de evaluación</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=e4ee62db0f8040e985a8c5dcc9b342e6','MF18 Ejercicio de ocupación')">MF18 Ejercicio de ocupación</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=22a55150d5d44f32bea173204d296916','MF19 Sistema víal')">MF19 Sistema víal</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=03c3f06cd798469c844893dfd215deeb','MF21 Espacio público')">MF21 Espacio público</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=69999d4a363b43179711dccd36c6a237','MF22 Redes de servicios públicos')">MF22 Redes de servicios públicos</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=83db92668be247348e8f6c9bb181eff3','MF23 Usos')">MF23 Usos</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=eac843ffd3ba42149a22b5e167102aaf','MF24 Unidades de gestión')">MF24 Unidades de gestión</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=f8d5e6fd4cfd4937878a7ef43f68ac51','MF25 Etapas de desarrollo')">MF25 Etapas de desarrollo</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="test dropdown-item" tabindex="-1" href="#">Plan Zonal La Victoria</a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=50c707d7179046568533c4f3f330cac5','01-PZV-ImagenSatélital')">01-PZV-ImagenSatélital</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=741d51bb76b046ec82988a131006d380','02-PZV-MapaTopográfico')">02-PZV-MapaTopográfico</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=632689ae1eec4da3b33a307986b60f26','03-PZV-UnidadesGeológicasIngeniería')">03-PZV-UnidadesGeológicasIngeniería</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=89e1ba5bf6764ec3b3c1dd6ae1a449b3','04-PZV-CorteUGI')">04-PZV_CorteUGI</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=e70361743044497ba1d49de9ed7e78cc','05-PZV-ModeloDigitalTerreno')">05-PZV-ModeloDigitalTerreno</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=8d5a26ff8139446c858c79dba4fc0f90','06-PZV-Pendientes')">06-PZV-Pendientes</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=ebd58d5704e14460977fc7c89ccc85e4','07-PZV-Geomorfología')">07-PZV-Geomorfología</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=3a3bc2fafa7349ed82f81feabe5d88bd','08-PZV-MapaHidrológico')">08-PZV-MapaHidrológico</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=c06afe1d94cd4cfb86194d0e1137245b','09-PZV-UsoDelSuelo')">09-PZV-UsoDelSuelo</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=d0fec27ba44a466d8bed83701658cae5','10-PZV-AmenazasFRM-Esc-1')">10-PZV-AmenazasFRM-Esc-1</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=89f8e92d39d846189530b22ec35662f3','11-PZV-AmenazasFRM-Esc-2')">11-PZV-AmenazasFRM-Esc-2</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=35ba0c8e46cb468ea14294ea703a3127','12-PZV-AmenazasFRM-Esc-3')">12-PZV-AmenazasFRM-Esc-3</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=2d6ea08233644a319ffe0ef56b23c5f3','13-PZV-UbicaciónGeneral')">13-PZV_UbicaciónGeneral</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=df76f2c670504f3faaecfa8034bf6008','14-PZV-AmenazasINUN-Esc-1')">14-PZV-AmenazasINUN-Esc-1</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=c8f0713641de47d7866e67812aab5d77','15-PZV-AmenazasINUN-Esc-2')">15-PZV-AmenazasINUN-Esc-2</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=4fb52a920dda4a3a924ed31863b9503c','16-PZV-AmenazasINUN-Esc-3')">16-PZV-AmenazasINUN-Esc-3</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=177b3fdbe2cb4468bf9371b92294275f','17-PZV-InundaciónRíoHato')">17-PZV_InundaciónRíoHato</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=41095b5da0b447aabdb64900c7a04ece','18-PZV-VulnerabilidadFRM-Esc-1')">18-PZV-VulnerabilidadFRM-Esc-1</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=db3476a448734f7f862ae99def846622','19-PZV-VulnerabilidadFRM-Esc-2')">19-PZV-VulnerabilidadFRM-Esc-2</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=a878c6209e954303ac6675751636ad5f','20-PZV-VulnerabilidadFRM-Esc-3')">20-PZV-VulnerabilidadFRM-Esc-3</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=340e4a75b6bf4c7e883de6a228eb357e','21-PZV-VulnerabilidadINUN-Esc-1')">21-PZV-VulnerabilidadINUN-Esc-1</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=0006fabbdb6a4f59a4fa3ca78d8b3823','22-PZV-VulnerabilidadINUN-Esc-2')">22-PZV-VulnerabilidadINUN-Esc-2</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=b0ef8c4fcf044b7ba66f361e60862780','23-PZV-VulnerabilidadINUN-Esc-3')">23-PZV-VulnerabilidadINUN-Esc-3</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=d535395399454c06b5a7b63c1e4ab97d','24-PZV-RiesgoFRM-Esc-1')">24-PZV-RiesgoFRM-Esc-1</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=797fd004498a400888b5499c89bfbb59','25-PZV-RiesgoFRM-Esc-2')">25-PZV-RiesgoFRM-Esc-2</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=ff0dda80c6c443a9a5f71b5f763ff491','26-PZV-RiesgoFRM-Esc-3')">26-PZV-RiesgoFRM-Esc-3</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=56e35ab9ee89493298cb0518b4c6ecba','27-PZV-RiesgoINUN-Esc-1')">27-PZV-RiesgoINUN-Esc-1</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=83b45666add043c2a456d5dd8310e120','28-PZV-RiesgoINUN-Esc-2')">28-PZV-RiesgoINUN-Esc-2</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=6f45448da30a446c9efbe1b0eb257a97','29-PZV-RiesgoINUN-Esc-3')">29-PZV-RiesgoINUN-Esc-3</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=68c2f42330e243efa6a4ed5d3017dd65','30-PZV-MedidasdeIntervención')">30-PZV-MedidasdeIntervención</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('Null','31-PZV-DetallesCanalización')">31-PZV-DetallesCanalización</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=e0475859514c449a9623ac580d963d2a','32-PZV-MedidasdeIntervención')">32-PZV_Batimetría</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=efaaa0cb213d464598c83df39a39fe43','33-PZV-GeologiaLocal')">33-PZV-GeologiaLocal</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=75926c3f4fae44cd93ac814180d7eca8','34-PZV-GeomorfologíaLocal')">34-PZV-GeomorfologíaLocal</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=08fc06211d8f44b49427905bdf0f4e5e','35-PZV-ZonificaciónAmbiental')">35-PZV-ZonificaciónAmbiental</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=6c5688294b8049d3bea87d7418e96133','01_Estructura Predial')">01_Estructura Predial</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=705a367c411c40188a483b41e790ef98','02_Estructura de Planificación')">02_Estructura de Planificación</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=622c69e6c6f74b8481c19afe55e42056','03_Sistema Víal')">03_Sistema Víal</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=609dc5ca581f45ae8887637df791c44f','04_Afectaciones')">04_Afectaciones</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=831103bbdf684d3d96b408a28c3e5899','05_Espacio Público y Privado')">05_Espacio Público y Privado</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=7dab04b63c4f4a5d8b0f4ea4954d235d','06_Usos')">06_Usos</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=5cf025560f264d6882cb29548326fbec','07_Servicios Públicos')">07_Servicios Públicos</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=17b1ed2ea95245ebba4865bec8dbee53','08_Cargas Locales')">08_Cargas Locales</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="test dropdown-item" tabindex="-1" href="#">Reserva Ruitoque</a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=2c6653e81338466f99ec02cb1707102f','01_RR_Base')">01_RR_Base</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=8632aaa749b34648a14735a310ee47cb','02_RR_Predial')">02_RR_Predial</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=3601fbb0ce8e4125971d010b623292ed','03_RR_Hidrologico')">03_RR_Hidrologico</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=ef559da5a89643a9b63b180579c135be','04_RR_Geologico')">04_RR_Geologico</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=337deb32e2154bc0842ebdf38c879a07','05_RR_Geomorfologico')">05_RR_Geomorfologico</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=438f8bfc06ed455985b16a73039c479d','06_RR_Pendientes')">06_RR_Pendientes</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=049ead7445ff40b8a0736d1ec072cd94','07_RR_Inventario_Forestal')">07_RR_Inventario_Forestal</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=e2ccb4494aa244c9ad521a0648834ffd','08_RR_Franjes_Inundables_Con_Obras')">08_RR_Franjes_Inundables_Con_Obras</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=ca368fc84cbf4fc093cefe95cc74ec6c','09_RR_Franjas_Inundables_Sin_Obras')">09_RR_Franjas_Inundables_Sin_Obras</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=5e57742c3cd540e08c0ee989c247ef2b','10_RR_Zonificación_Geotecnica')">10_RR_Zonificación_Geotecnica</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=7d55c43923014b38aa4f4b06a18e6a01','11_RR_Amenazas_Por_Inundación')">11_RR_Amenazas_Por_Inundación</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=3ed0918b858d49ef86be4e6456bbd873','12_RR_Amenazas_Por_Remoción_en_Masa_Estado_Actual')">12_RR_Amenazas_Por_Remoción_en_Masa_Estado_Actual</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=a951fca60e034e83861549bdc9669d66','13_RR_Amenazas_Por_Remoción_en_Masa_con_Proyecto_Extrema')">13_RR_Amenazas_Por_Remoción_en_Masa_con_Proyecto_Extrema</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=561bc153990846509fe08522c6669fe9','14_RR_Vulnerabilidad_Física_Actual')">14_RR_Vulnerabilidad_Física_Actual</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=807b6eb271dd487592980e2593190d51','15_RR_Vulnerabilidad_Física_Proyectada')">15_RR_Vulnerabilidad_Física_Proyectada</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=4b2b7b3338bb45868dd56d474345bd55','16_RR_Riesgos_por_Fenomenos_de_Remoción_en_Masa_Actual')">16_RR_Riesgos_por_Fenomenos_de_Remoción_en_Masa_Actual</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=c63d5e19920d4e0980055f289ac298bd','17_RR_Riesgos_por_Fenomenos_de_Remoción_en_Masa_Proyectado')">17_RR_Riesgos_por_Fenomenos_de_Remoción_en_Masa_Proyectado</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=2e6dc121c3554042ae7157a44f479673','18_RR_Riesgos_por_Inundacion_Proyectado')">18_RR_Riesgos_por_Inundacion_Proyectado</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=5a43a3213c6e4997903d5360ccf04fc9','19_RR_Riesgos_con_Obras_de_Mitigación_Proyectado')">19_RR_Riesgos_con_Obras_de_Mitigación_Proyectado</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=bfe5483ffd4c42f1851dae86b937660d','20_RR_Formulación_Sistema_Víal')">20_RR_Formulación_Sistema_Víal</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=a1f05371476645ccab6a0e700a7b06b6','21_RR_Formulación_Espacio_Público_y_Privado')">21_RR_Formulación_Espacio_Público_y_Privado</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=c41b6991505842d8a33e22ae0cb39e0b','22_RR_Etapas_de_Desarrollo')">22_RR_Etapas_de_Desarrollo</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=4ffbb3e5008640068220564bdb41c139','23_RR_Unidades_de_Actuación')">23_RR_Unidades_de_Actuación</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=880a2bc7233c44c9877e224cace210bb','24_RR_Afectaciones')">24_RR_Afectaciones</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=f2aa5db9bf504b2b8e605ac85674b84c','25_RR_Servicios_Públicos')">25_RR_Servicios_Públicos</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1"  onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=5b469ac798604c258a9b368eb805af49','26_RR_Usos')">26_RR_Usos</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="test dropdown-item" tabindex="-1" href="#">Punta Piedra</a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=f4713fa2a4d848fbbcb877000efdb775','01_PP_Topográfico')">01_PP_Topográfico</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=4980e6bc06784366a98a568d8536e35a','02_PP_Catastral')">02_PP_Catastral</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=55a59e19159f4cbeaf42d5301419b637','03_PP_Hidrológico')">03_PP_Hidrológico</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=3bb770da20f1485884225f135ea90a12','04_PP_Geológico')">04_PP_Geológico</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=64db30bd0d404c2c8738267b5020850f','05_PP_Geomorfológico')">05_PP_Geomorfológico</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=e96d4ac52b074c6c870d2615b00c5584','06_PP_Pendientes')">06_PP_Pendientes</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=50ff156ff69a42c2822db803d442f3dc','07_PP_Inventario_de_Aprovechamiento_Forestal')">07_PP_Inventario_de_Aprovechamiento_Forestal</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=858811e7709b4ef1811468fcfc6b514d','08_PP_Cobertura_de_la_Tierra')">08_PP_Cobertura_de_la_Tierra</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=dab7bb79dfb84a768902e79de48a4466','09_PP_Estructura_Ecológica')">09_PP_Estructura_Ecológica</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=4636e041cdd042b7a3db5e8e1e54cf93','10_PP_Zonificación_Geotecnica')">10_PP_Zonificación_Geotecnica</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=5d20c34cf02943c588bc0f20acac5f9f','11_PP_Amenazas_por_Inundación_Sin_Proyecto')">11_PP_Amenazas_por_Inundación_Sin_Proyecto</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=d07ca56fe5d641819383be3596336ae0','11.1_PP_Amenazas_por_Inundación_Con_Proyecto')">11.1_PP_Amenazas_por_Inundación_Con_Proyecto</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=d6e23115bef44999af34ca7ba219a66e','12_PP_Amenaza_por_Movimiento_en_Masa_sin_Proyecto')">12_PP_Amenaza_por_Movimiento_en_Masa_sin_Proyecto</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=abc0a3f1ff5e4ce2b9b031e089fd52a1','12.1_PP_Amenaza_por_Movimiento_en_Masa_con_Proyecto')">12.1_PP_Amenaza_por_Movimiento_en_Masa_con_Proyecto</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=e324e7745a084fae9ba164e196d91a8b','13_PP_Amenaza_por_Avenidas_Torrenciales_sin_Proyecto')">13_PP_Amenaza_por_Avenidas_Torrenciales_sin_Proyecto</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=7837dff8ba5740ff9c5dd9c919faea17','13.1_PP_Amenaza_por_Avenidas_Torrenciales_con_Proyecto')">13.1_PP_Amenaza_por_Avenidas_Torrenciales_con_Proyecto</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=cef9ed2c7fb74e94a324fd01e4307dc9','14_PP_Vulnerabilidad_sin_Proyecto')">14_PP_Vulnerabilidad_sin_Proyecto</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=26d2d814ba5141efa8b8236df5fbaed6','15_PP_Vulnerabilidad_con_Proyecto')">15_PP_Vulnerabilidad_con_Proyecto</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=aea9afe6110e46c19c5b6f52aceb27b3','16_PP_Riesgo_sin_Proyecto')">16_PP_Riesgo_sin_Proyecto</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=d6892aaabde343198ad60502594f99d3','17_PP_Riesgo_con_Proyecto')">17_PP_Riesgo_con_Proyecto</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=c783844e4bd44dea98417a71a06a3935','18_PP_Estructura_de_Planificación')">18_PP_Estructura_de_Planificación</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=cbd5c60b76ff44cc92e6d52e27c41a79','19_PP_Sistema_Víal')">19_PP_Sistema_Víal</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=2dbad2c6a374449eadb7d81be3d8621a','20_PP_Afectaciones')">20_PP_Afectaciones</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=67df506a3422467fabb24ba47061b117','21_PP_Espacio_Público_y_Privado')">21_PP_Espacio_Público_y_Privado</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=120434b18aae4fd59bb5306f5b1ccc7f','22_PP_Usos')">22_PP_Usos</a></li>
+                                    <li class="dropdown-item"><a class="dropdown-item" tabindex="-1" onclick="loadMap('https://itim.maps.arcgis.com/apps/View/index.html?appid=f655efbcb21944eba909edf8348e13fd','23_PP_Servicios_Públicos')">23_PP_Servicios_Públicos</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Consulta de uso de suelo</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="containerMaps">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe id='MapView' class="embed-responsive-item" src="https://itim.maps.arcgis.com/apps/View/index.html?appid=72c0410e434444d48a6e0ac3be7f72f6"></iframe>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+          $('.dropdown-submenu a.test').on("click", function(e){
+            let ch = $(this).next('ul');
+            console.log(ch);
+            if(ch[0].style.display === 'flex'){
+                ch[0].style.display = 'none';
+            }
+            else{
+                ch[0].style.display = 'flex';
+            }
+            $('.dropdown-submenu a.test').not(this).next('ul').hide();
+            e.stopPropagation();
+            e.preventDefault();
+          });
+        });
+    </script>
+
+    <script>
+        function loadMap(url,title) {
+            document.getElementById('MapView').src = url
+            document.title = title
+        }
+    </script>
+
+    <script>
+        function myFunction(){
+            if(window.screen.width < 1024){
+                document.body.style.fontSize = 9 + 'px ';
+                const cs = document.getElementsByClassName('dropdown-menu')
+                for (let i = 0; i < cs.length; i++) {
+                    cs[i].style.fontSize = 9 + 'px ';
+                }
+                document.getElementById('navbarNav').style.position = 'absolute'
+                document.getElementById('navbarNav').style.top = 0
+                document.getElementById('navbarNav').style.left = 0
+                document.getElementById('navbarNav').style.width = '80%'
+                document.getElementById('navBarMenu').style.position = 'relative'
+                document.getElementById('navBarMenu').style.flexDirection = 'column'
+                document.getElementById('navBarMenu').style.zIndex = 100
+                document.getElementById('navBarMenu').style.backgroundColor = '#FFF'
+                document.getElementById('navBarMenu').style.alignContent = 'center'
+                const ch = document.getElementById('navBarMenu').children
+                for (let i = 0; i < ch.length; i++) {
+                    ch[i].style.display = 'flex'
+                    ch[i].style.justifyContent = 'center'
+                }
+            }
+        }
+        document.onload = myFunction();
+    </script>
+</body>
+</html>

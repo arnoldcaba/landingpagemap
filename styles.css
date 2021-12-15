@@ -1,0 +1,44 @@
+* {
+ margin: 0;
+}
+
+body {
+ overflow-y: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar {
+    padding: 0 1rem;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+.navbar-brand img {
+    height: 5rem;
+}
+
+#navbarNav {
+    justify-content: end;
+}
+
+#navBarMenu {
+    justify-content: end;
+}
+
+.dropdown-submenu ul{
+    display: none;
+    position: fixed;
+    top: 200px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.dropdown-submenu ul li{
+    width: 25%;
+}
